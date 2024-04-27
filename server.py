@@ -10,9 +10,11 @@ create_notify_dict = {
           "low_price_day": 345      
         }
 def server():
-    create(create_notify_dict)
+    create_resp = create(create_notify_dict)
+    print(create_resp)
     
 
 if __name__ == "__main__":
     print("server init")
+    server()
 

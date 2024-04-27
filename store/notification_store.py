@@ -5,26 +5,25 @@ async def execute_notify_service():
 
 class NotificationStore:
     notification = {}
-    index: 1
-    def __init__():
+    self.index: 1
+    def __init__(self):
         pass
     
     # class(Enum):
     #     PENDING: "pending"
 
-        
     def create(self, notification_data):
         # state has this specified values
         # pending
         # delivered
         # failed
-        index += 1
+        self.index += 1
         notification_data["meta"] = {
             "state": "pending",
-            "index": index
+            "index": self.index
         }
-        self.notification[index](notification_data)
-        return index
+        self.notification[self.index](notification_data)
+        return self.index
 
     async def send(self, notification_index, sender_ids):
         for email_id in enumerate(sender_ids):

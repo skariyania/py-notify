@@ -1,5 +1,7 @@
 from decimal import Decimal
 
+from store.notification_store import NotificationStore
+
 # // pydentic
 class CreateNotificationAssetPricing:
     asset_pricing: Decimal
@@ -9,7 +11,6 @@ class CreateNotificationAssetPricing:
     low_price_day: Decimal
 
 def create(req):
-    NotificationStore().create
-    create()
-    processed_req(req)
-    
+    store = NotificationStore()
+    notification_store_resp = store.create(req)
+    return notification_store_resp
