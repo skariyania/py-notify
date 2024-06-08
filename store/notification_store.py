@@ -4,10 +4,12 @@ async def execute_notify_service():
     pass
 
 class NotificationStore:
-    notification = {}
-    self.index: 1
+    
+    
     def __init__(self):
-        pass
+        self.index = 1
+        notification = {}
+        
     
     # class(Enum):
     #     PENDING: "pending"
